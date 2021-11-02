@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    height: 100vh;
+}
 header{
     height: 70px;
 }
@@ -36,5 +38,31 @@ header{
 }
 main{
     background-color: aqua;
-    height: 70%;
+    height: calc(100vh - 110px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.none{
+    display: none;
+}
+.block{
+    display: block;
+}
+.countain-wrap{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+.square{
+    width: calc(500px / 8);
+    height: calc(500px / 8);
+    border: 1px solid black;
+}
+
+footer{
+    height: 40px;
 }
