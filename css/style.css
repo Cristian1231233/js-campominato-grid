@@ -58,11 +58,17 @@ main{
     flex-wrap: wrap;
 }
 .square{
-    width: calc(500px / 8);
-    height: calc(500px / 8);
+    width: calc(100% / 10);
+    height: calc(100% / 10);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
     height: 40px;
+}
+.clicked{
+    background-color: cornflowerblue;
 }
