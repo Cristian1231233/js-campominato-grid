@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    height: 70px;
+}
+.container-head{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: orchid;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo-text{
+    display: flex;
+}
+.logo{
+    width: 90px;
+    height: 100%;
+    background-color: red;
+}
+.logo img{
+    height: 100%;
+}
+.title{
+    line-height: 70px;
+    font-size: 30px;
+}
+.contain-input{
+    line-height: 70px;
+}
+main{
+    background-color: aqua;
+    height: 70%;
+}
