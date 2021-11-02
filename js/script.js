@@ -16,7 +16,6 @@ for( let i = 1; i < 101; i++){
     container.append(sq);
     sq.addEventListener('click', function(){
         this.classList.add('clicked');
-        sq.className('none');
     });
 }
 
