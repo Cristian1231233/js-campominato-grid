@@ -1,13 +1,15 @@
 
-let container = document.querySelector('.countain-wrap');
-console.log(container);
+let containerHidd = document.querySelector('.container-hidden');
 const play = document.querySelector('.play');
 console.log(play);
 const testo = document.querySelector('.testo');
 
 
 
-
+play.addEventListener('click', function(){
+    let container = document.querySelector('.countain-wrap');
+    console.log(container);
+    
 // creo un ciclo for in cui inserisco gli square
 for( let i = 1; i < 101; i++){
     const sq = document.createElement('div');
@@ -17,9 +19,12 @@ for( let i = 1; i < 101; i++){
     sq.addEventListener('click', function(){
         this.classList.add('clicked');
     });
+
 }
-
-
+    testo.classList.add('none');
+    containerHidd.classList.remove('none');
+    
+});
 
 
 
