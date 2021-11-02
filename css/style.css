@@ -13,7 +13,6 @@ header{
     width: 80%;
     height: 100%;
     margin: 0 auto;
-    background-color: orchid;
     display: flex;
     justify-content: space-between;
     
@@ -24,7 +23,6 @@ header{
 .logo{
     width: 90px;
     height: 100%;
-    background-color: red;
 }
 .logo img{
     height: 100%;
@@ -50,13 +48,17 @@ main{
 .block{
     display: block;
 }
+.countain-hidden{
+    width: 600px;
+    height: 500px;
+}
 .countain-wrap{
     width: 500px;
     height: 500px;
-    
     display: flex;
     flex-wrap: wrap;
 }
+
 .square{
     width: calc(100% / 10);
     height: calc(100% / 10);
@@ -71,4 +73,16 @@ footer{
 }
 .clicked{
     background-color: cornflowerblue;
+}
+.contain-footer{
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+.text-footer{
+    line-height: 40px;
+}
+.blue{
+    color: blue;
+    text-decoration: underline;
 }
