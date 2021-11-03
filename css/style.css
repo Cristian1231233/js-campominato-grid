@@ -48,10 +48,10 @@ main{
 .block{
     display: block;
 }
-.countain-hidden{
+/* .countain-hidden{
     width: 600px;
     height: 500px;
-}
+} */
 .countain-wrap{
     width: 500px;
     height: 500px;

@@ -1,49 +1,63 @@
 
-let containerHidd = document.querySelector('.container-hidden');
-const play = document.querySelector('.play');
-console.log(play);
-const testo = document.querySelector('.testo');
 
-let selezione = document.getElementById('selezione');
-console.log(selezione);
-let inpFacile = document.getElementById('facile').value;
-console.log(inpFacile);
-let inpMedio = document.getElementById('medio').value;
-console.log(inpMedio);
-let inpDifficile = document.getElementById('difficile').value;
-console.log(inpDifficile);
+document.querySelector('.play').addEventListener('click', function(){
+   play();
+});
 
-function getselectedValue(){
-    let selectedValue = document.getElementById('selezione');
-    console.log(selectedValue);
+function play(){
+    const level = document.getElementById('selezione').value;
+    console.log(level);
+    const grigliaLevel = [100, 81, 49];
+    console.log(grigliaLevel);
+    const numeroCelle = grigliaLevel[level-1];
+    console.log(numeroCelle);
+    const celleForRow = Math.sqrt(numeroCelle);
+    console.log(celleForRow);
+
 }
-getselectedValue();
 
 
-play.addEventListener('click', function(){
+
+
+
+
+// const testo = document.querySelector('.testo');
+
+// let selezione = document.getElementById('selezione');
+// console.log(selezione);
+
+
+// function getselectedValue(){
+//     let selectedValue = document.getElementById('selezione');
+//     console.log(selectedValue);
+// }
+// getselectedValue();
+
+
+// play.addEventListener('click', function(){
   
 
  
-    let container = document.querySelector('.countain-wrap');
-    console.log(container);
+//     let container = document.querySelector('.countain-wrap');
+//     console.log(container);
     
-// creo un ciclo for in cui inserisco gli square
-for( let i = 1; i < 101; i++){
+// // creo un ciclo for in cui inserisco gli square
+// for( let i = 1; i < 101; i++){
     
-    const sq = document.createElement('div');
-    sq.className = 'square';
-    sq.innerHTML = `<span> ${numerRandom(1, 100)}</span>`;
-    container.append(sq);
-    sq.addEventListener('click', function(){
-        this.classList.add('clicked');
-    });
+//     const sq = document.createElement('div');
+//     sq.className = 'square';
+//     sq.innerHTML = `<span> ${numerRandom(1, 100)}</span>`;
+//     container.append(sq);
+//     sq.addEventListener('click', function(){
+//         this.classList.add('clicked');
+//     });
   
-}
+// }
 
-    testo.classList.add('none');
-    containerHidd.classList.remove('none');
+//     testo.classList.add('none');
+//     containerHidd.classList.remove('none');
     
-});
+// });
 
   
 
