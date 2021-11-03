@@ -53,19 +53,17 @@ main{
     height: 500px;
 } */
 .countain-wrap{
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-wrap: wrap;
+    width: 470px;
+    height: 470px;
+    background-color: white;
+    border: 1px solid black;
 }
 
 .square{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
-    border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid black;
 }
 
 footer{

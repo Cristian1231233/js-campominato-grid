@@ -7,16 +7,46 @@ document.querySelector('.play').addEventListener('click', function(){
 function play(){
     const level = document.getElementById('selezione').value;
     console.log(level);
-    const grigliaLevel = [100, 81, 49];
-    console.log(grigliaLevel);
-    const numeroCelle = grigliaLevel[level-1];
-    console.log(numeroCelle);
+    
+    let numeroCelle;
+    if(level === 'easy'){
+        numeroCelle = 100;
+        console.log(numeroCelle);
+    }else if(level === 'crasy'){
+        numeroCelle = 81;
+        console.log(numeroCelle);
+    }else if(level === 'hard'){
+        numeroCelle = 49;
+        console.log(numeroCelle);
+    }
+    
     const celleForRow = Math.sqrt(numeroCelle);
     console.log(celleForRow);
 
+
+    document.querySelector('main').innerHTML = '';
+    generateGrid();
+
+    function generateGrid(){
+        const grid = document.createElement('div');
+        grid.className = 'countain-wrap';
+        for( let i = 1; i <= numeroCelle; i++){
+        //    creo ogni cella
+           const cella = document.createElement('div');
+           cella.className = 'square';
+           cella.innerHTML = `<span>${i}</span>`;
+           const cellaSize = `calc(100% / ${cellaForRow})`;
+           cella.style.width = cellaSize;
+           cella.style.height = cellaSize;
+           
+           grid.append(cella);
+        }
+
+    }
+    
+    document.querySelector('main').append(grid);
+
 }
-
-
 
 
 
@@ -68,6 +98,5 @@ function play(){
 
 
 
-function numerRandom(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
+// function numerRandom(min, max){
+//     return Math.floor(Math.random() * (max - min + 1) + min)
