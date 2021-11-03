@@ -29,22 +29,33 @@ function play(){
 
     function generateGrid(){
         const grid = document.createElement('div');
+
         grid.className = 'countain-wrap';
+
+        document.querySelector('main').append(grid);
+
         for( let i = 1; i <= numeroCelle; i++){
         //    creo ogni cella
            const cella = document.createElement('div');
            cella.className = 'square';
            cella.innerHTML = `<span>${i}</span>`;
-           const cellaSize = `calc(100% / ${cellaForRow})`;
+           const cellaSize = `calc(100% / ${celleForRow})`;
            cella.style.width = cellaSize;
            cella.style.height = cellaSize;
            
            grid.append(cella);
+
+           cella.addEventListener('click', function(){
+               this.classList.add('clicked');
+               console.log('cliccata');
+           });
         }
 
+
     }
+
+
     
-    document.querySelector('main').append(grid);
 
 }
 
